@@ -62,9 +62,22 @@ body:
       description: В каком окружении возникла проблема?
       options:
         - Production
-        - Staging
-        - Development
-        - Local
+        - Stage
+        - Dev/Local
+      default: 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      description: Выберите приоритет проблемы
+      options:
+        - Критический
+        - Высокий
+        - Средний
+        - Низкий
     validations:
       required: true
 
